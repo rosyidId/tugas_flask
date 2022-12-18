@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Tambah Mahasiswa{% endblock title %}
+<!-- navbar -->
+<!-- conten -->
+{%block content%}
+<div class="container mt-5">
+  <div class="card bg-dark ms-4 me-4">
+    <h4 class="card-header text-white">Masukkan Data Mahasiswa</h4>
+    <div class="card-body" style="background-color: rgb(39, 39, 39);">
+      <form action="/addmh" method="post">
+        <div class="mb-3">
+          <label for="nim" class="form-label text-white">Nim</label>
+          <input type="text" name="nim" class="form-control" id="nim" placeholder="masukan nim">
+        </div>
+        <div class="mb-3">
+          <label for="namaprodi" class="form-label text-white">Kode Prodi</label>
+          <input type="text" name="kode_prodi" class="form-control" id="namaprodi" placeholder="masukan nama prodi">
+        </div>
+        <div class="mb-3">
+          <label for="nama" class="form-label text-white">Nama</label>
+          <input type="text" name="nama" class="form-control" id="nama" placeholder="masukan nama">
+        </div>
+        <div class="col-auto">
+          <label for="autoSizingSelect" class="form-label text-white">Jenis Kelamin</label>
+          <select name="jenis_kelamin" class="form-select" id="autoSizingSelect">
+            <option selected>Pilih</option>
+            <option value="1">L</option>
+            <option value="2">P</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="tempatlahir" class="form-label text-white">Tempat Lahir</label>
+          <input type="text" name="tempat_lahir" class="form-control" id="tempatlahir"
+            placeholder="masukan tempat lahir">
+        </div>
+        <div class="mb-3">
+          <label for="tgl lahir" class="form-label text-white">Tanggal Lahir</label>
+          <input type="date" name="tanggal_lahir" class="form-control" value="2023-01-01" id="tgl lahir">
+        </div>
+        <div class="mb-3">
+          <label for="alamat" class="form-label text-white">Alamat</label>
+          <textarea name="alamat" class="form-control" id="alamat" rows="3"
+            placeholder="masukan alamat des.kec.kab"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Simpan
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+            <path
+              d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- END FORM -->
+
+<br />
+</div>
+</div>
+
+{%endblock content%}

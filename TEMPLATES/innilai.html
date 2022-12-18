@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Tambah Nilai{% endblock title %}
+{%block content%}
+
+<div class="container mt-5">
+  <div class="card bg-dark ms-4 me-4">
+    <h4 class="card-header text-white">Masukkan Data Kaprodi</h4>
+    <div class="card-body" style="background-color: rgb(39, 39, 39);">
+      <form action="/addnilai" method="post">
+        <div class="mb-3">
+          <label for="nim" class="form-label text-white">NIM</label>
+          <input type="text" name="nim" class="form-control" id="nim" placeholder="masukan nim">
+        </div>
+        <div class="mb-3">
+          <label for="kode_mk" class="form-label text-white">Kode Matakuliah</label>
+          <input type="text" name="kode_mk" class="form-control" id="kode_mk" placeholder="masukan kode matakuliah">
+        </div>
+        <div class="mb-3">
+          <label for="absen" class="form-label text-white">Absen</label>
+          <input type="text" name="absen" class="form-control" id="absen" placeholder="masukan nilai absen">
+        </div>
+        <div class="mb-3">
+          <label for="tugas" class="form-label text-white">Tugas</label>
+          <input type="text" name="tugas" class="form-control" id="tugas" placeholder="masukan nilai tugas">
+        </div>
+        <div class="mb-3">
+          <label for="uts" class="form-label text-white">UTS</label>
+          <input type="text" name="uts" class="form-control" id="uts" placeholder="masukan nilai uts">
+        </div>
+        <div class="mb-3">
+          <label for="uas" class="form-label text-white">UAS</label>
+          <input type="text" name="uas" class="form-control" id="uas" placeholder="masukan nilai uas">
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Simpan
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+            <path
+              d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- END FORM -->
+{%endblock content%}
